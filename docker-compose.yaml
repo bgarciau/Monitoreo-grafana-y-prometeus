@@ -3,7 +3,7 @@ version: '3.8'
 services:
   app:
     image: ghcr.io/bgarciau/monitoreo-grafana-y-prometeus:latest
-    container_name: python-app
+    container_name: app
     ports:
       - "5000:5000"
     networks:
@@ -39,4 +39,4 @@ volumes:
 
 networks:
   monitor-net:
-  
+
