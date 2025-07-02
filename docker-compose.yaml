@@ -2,8 +2,8 @@ version: '3.8'
 
 services:
   app:
-    image: python:3.10
-     container_name: python-app
+    image: ghcr.io/bgarciau/monitoreo-grafana-y-prometeus:latest
+    container_name: python-app
     ports:
       - "5000:5000"
     networks:
@@ -29,6 +29,8 @@ services:
       - "3000:3000"
     volumes:
       - grafana-storage:/var/lib/grafana
+      # Descomenta la siguiente línea solo si tienes provisioning configurado
+      # - ./grafana/provisioning:/etc/grafana/provisioning
     networks:
       - monitor-net
     depends_on:

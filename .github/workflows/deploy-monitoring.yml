@@ -7,7 +7,6 @@ on:
       - "monitoring/**"
       - ".github/workflows/deploy-monitoring.yml"
       
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
