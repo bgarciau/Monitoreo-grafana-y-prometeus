@@ -5,9 +5,6 @@ on:
   push:
     branches:
       - main
-    paths:
-      - "app/**"
-      - ".github/workflows/deploy-app.yml"
 
 jobs:
   deploy:
