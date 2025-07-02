@@ -22,4 +22,3 @@ jobs:
             cd ~/monitoreo-grafana-y-prometeus
             git pull
             docker compose up -d app 
-
