@@ -22,5 +22,4 @@ jobs:
             cd ~/monitoreo-grafana-y-prometeus
             git pull
             echo "${{ secrets.GH_TOCKEN }}" | docker login ghcr.io -u bgarciau --password-stdin
-            docker-compose pull app
             docker-compose up -d app

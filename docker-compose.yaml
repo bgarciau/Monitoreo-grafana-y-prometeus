@@ -29,8 +29,6 @@ services:
       - "3000:3000"
     volumes:
       - grafana-storage:/var/lib/grafana
-      # Descomenta la siguiente línea solo si tienes provisioning configurado
-      # - ./grafana/provisioning:/etc/grafana/provisioning
     networks:
       - monitor-net
     depends_on:
