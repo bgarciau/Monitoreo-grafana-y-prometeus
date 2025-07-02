@@ -39,3 +39,4 @@ volumes:
 
 networks:
   monitor-net:
+  

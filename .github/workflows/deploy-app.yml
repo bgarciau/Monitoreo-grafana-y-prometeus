@@ -3,6 +3,13 @@ name: Deploy App via SSH
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "app/**"
+      - "docker-compose.yaml"
+      - ".github/workflows/deploy-app.yml"
 
 jobs:
   deploy:
@@ -21,4 +28,7 @@ jobs:
           script: |
             cd ~/monitoreo-grafana-y-prometeus
             git pull
+            docker-compose stop app || true
+            docker-compose rm -f app || true
+            docker-compose pull app
             docker-compose up -d app

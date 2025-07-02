@@ -17,4 +17,3 @@ def metrics():
 if __name__ == "__main__":
     prometheus_client.start_http_server(8000)
     app.run(host="0.0.0.0", port=5000)
-

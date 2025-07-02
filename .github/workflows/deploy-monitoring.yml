@@ -6,6 +6,7 @@ on:
     paths:
       - "monitoring/**"
       - ".github/workflows/deploy-monitoring.yml"
+
       
 jobs:
   deploy:
@@ -24,5 +25,8 @@ jobs:
           script: |
             cd ~/monitoreo-grafana-y-prometeus
             git pull
+            docker-compose stop prometheus grafana || true
+            docker-compose rm -f prometheus grafana || true
+            docker-compose pull prometheus grafana
             docker-compose up -d prometheus grafana
 

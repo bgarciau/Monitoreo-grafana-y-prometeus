@@ -7,7 +7,6 @@ on:
       - "app/**"
       - ".github/workflows/build.yml"
       
-
 jobs:
   build:
     runs-on: ubuntu-latest
