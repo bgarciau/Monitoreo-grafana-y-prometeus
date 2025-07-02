@@ -21,4 +21,4 @@ jobs:
           script: |
             cd ~/monitoreo-grafana-y-prometeus
             git pull
-            docker compose up -d app
+            docker compose up -d app 
