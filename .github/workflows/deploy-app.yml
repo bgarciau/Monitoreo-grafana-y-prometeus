@@ -2,9 +2,8 @@
 name: Deploy App via SSH
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
+
 
 jobs:
   deploy:
