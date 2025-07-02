@@ -26,7 +26,7 @@ jobs:
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_KEY }}
           script: |
-            cd ~/monitoreo-grafana-y-prometeus
+            cd ~/monitoreo-grafana-y-prometeus || git clone https://github.com/bgarciau/monitoreo-grafana-y-prometeus.git && cd monitoreo-grafana-y-prometeus
             git pull
             docker-compose stop app || true
             docker-compose rm -f app || true
