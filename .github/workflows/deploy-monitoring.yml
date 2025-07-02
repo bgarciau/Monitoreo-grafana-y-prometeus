@@ -6,6 +6,7 @@ on:
     paths:
       - "monitoring/**"
       - ".github/workflows/deploy-monitoring.yml"
+      
 
 jobs:
   deploy:

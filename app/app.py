@@ -1,7 +1,6 @@
 # app/app.py
 from flask import Flask
 from prometheus_client import Counter, generate_latest
-import prometheus_client
 
 app = Flask(__name__)
 REQUEST_COUNT = Counter("request_count", "App Request Count")
@@ -9,7 +8,7 @@ REQUEST_COUNT = Counter("request_count", "App Request Count")
 @app.route("/")
 def hello():
     REQUEST_COUNT.inc()
-    return "Hello from the app!"
+    return "Hello, prometheus!"
 
 @app.route("/metrics")
 def metrics():
